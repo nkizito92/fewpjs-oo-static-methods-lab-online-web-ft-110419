@@ -8,9 +8,21 @@ class Formatter {
 
   }
   static titleize(string) {
-    let word = []
-    for(let char of string.split(" ")) 
-     (word.push(str[char]))
-     return word.join(" ")
+   let isExcepted = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
+    let word = [];
+    let words = string.split( " " )
+    for ( let n = 0; n < words.length; n++ ) {
+      if ( n == 0 ) {
+        word.push( this.capitalize( words[ n ] ) )
+      } else {
+        if ( isExcepted.includes( words[ n ] ) ) {
+          word.push( words[ n ] )
+        } else {
+          word.push( this.capitalize( words[ n ] ) )
+        }
+      }
+
+    }
+    return word.join(" ")
   }
 }
