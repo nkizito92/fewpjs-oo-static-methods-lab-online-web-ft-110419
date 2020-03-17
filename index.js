@@ -10,15 +10,15 @@ class Formatter {
   static titleize(string) {
    let isExcepted = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let word = [];
-    let arrayOfWords = string.split( " " )
-    for ( let n = 0; n < arrayOfWords.length; n++ ) {
+    let words = string.split( " " )
+    for ( let n = 0; n < words.length; n++ ) {
       if ( n == 0 ) {
-        word.push( this.capitalize( arrayOfWords[ n ] ) )
+        word.push( this.capitalize( words[ n ] ) )
       } else {
-        if ( isExcepted.includes( arrayOfWords[ n ] ) ) {
-          word.push( arrayOfWords[ n ] )
+        if ( isExcepted.includes( words[ n ] ) ) {
+          word.push( words[ n ] )
         } else {
-          word.push( this.capitalize( arrayOfWords[ n ] ) )
+          word.push( this.capitalize( words[ n ] ) )
         }
       }
 
