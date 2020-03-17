@@ -10,7 +10,7 @@ class Formatter {
   static titleize(string) {
    let isExcepted = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let word = [];
-    let arrayOfWords = sentence.split( " " )
+    let arrayOfWords = string.split( " " )
     for ( let n = 0; n < arrayOfWords.length; n++ ) {
       if ( n == 0 ) {
         word.push( this.capitalize( arrayOfWords[ n ] ) )
