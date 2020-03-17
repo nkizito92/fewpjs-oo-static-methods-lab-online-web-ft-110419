@@ -23,5 +23,6 @@ class Formatter {
       }
 
     }
+    return word.join" 
   }
 }
