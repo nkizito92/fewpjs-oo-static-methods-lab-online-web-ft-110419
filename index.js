@@ -10,7 +10,7 @@ class Formatter {
   static titleize(string) {
     let word = []
     for(let char of string.split(" ")) {
-     word.push(char.toUpperCase())
+     word.push(char.charAt(0).toUpperCase() + char.slice(1))
       
     }
      return word.join(" ")
